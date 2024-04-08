@@ -1,0 +1,597 @@
+@font-face {
+    font-family: "inter";
+    font-style: normal;
+    font-weight: 400;
+    src: local("inter, Sans-Serif"),
+    url("/fonts/inter/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    src: local("inter, Sans-Serif"),
+    url("/fonts/inter/Inter-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    src: local("inter, Sans-Serif"),
+    url("/fonts/inter/Inter-SemiBold.woff2") format("woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+}
+
+/*HEADER*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FBFBFB;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    z-index: 1;
+}
+
+.header__nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.header__nav-links {
+    display: flex;
+}
+
+.header__content, .header__location, .main__content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__content a {
+    color: #666666;
+    font-size: 13px;
+    margin-right: 32px;
+}
+
+.header__button {
+    padding: 8px 42px;
+    border-radius: 12px;
+    background-color: #0B457F;
+    color: #FBFBFB;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+}
+
+.header__burger-btn {
+    display: none;
+    position: relative;
+    margin-left: 28px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header__burger-btn span {
+    position: absolute;
+    width: 26px;
+    height: 3px;
+    background-color: #0B457F;
+    left: 5px;
+    border-radius: 3px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.header__nav.open .header__burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+    border-radius: 0;
+}
+
+.header__nav.open .header__burger-btn span:nth-child(2) {
+    opacity: 0;
+    border-radius: 0;
+}
+
+.header__nav.open .header__burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+    border-radius: 0;
+}
+
+
+
+
+.header__divider {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-top: #CECECE 1px solid ;
+}
+
+.header__location__items {
+    display: flex;
+}
+
+.header__location a {
+    display: inline-flex;
+    color: #666666;
+    font-size: 12px;
+    align-items: center;
+}
+
+.header__location img {
+    margin-right: 8px;
+}
+
+.header__location__items a:nth-child(1) {
+    margin-right: 32px;
+}
+
+/*MAIN*/
+
+.main__content {
+    display: block;
+    padding-top: 163px;
+}
+
+.main__content h1 {
+    font-size: 24px;
+    line-height: 29px;
+    color: #3E3E3E;
+    margin-bottom: 32px;
+}
+
+.main__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 512px;
+}
+
+.main__defects, .main__grade {
+    overflow: hidden;
+    width: 424px;
+    height: 512px;
+    background-image: url("../img/bg_defects_card.png");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 12px;
+    padding: 32px 54px 32px 32px;
+    position: relative;
+}
+
+.main__defects {
+    margin-right: 13px;
+}
+
+.main__grade {
+    margin-left: 13px;
+}
+
+.main__defects__text h3 {
+    width: 284px;
+}
+
+.main__defects-car  {
+    width: 400px;
+    height: 192px;
+    background-image: url("../img/defects_cars.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 15px;
+    right: 12px;
+}
+
+.main__cards h3, span, button {
+    color: #ffffff;
+}
+
+.main__cards h3 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 12px;
+}
+
+.main__cards span {
+    width: 295px;
+    display: flex;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 32px;
+
+}
+
+.main__cards button {
+    font-size: 14px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    border: #FFFFFF solid 1px;
+    background-color: transparent;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.main__defects__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main__play {
+    margin-bottom: 12px;
+}
+
+.main__play button {
+    z-index: 1;
+}
+
+.main__play, .main__armor {
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 54px 32px 32px;
+    width: 424px;
+    height: 250px;
+    background-image: url("../img/bg_play_card.png");
+    background-repeat: no-repeat;
+}
+
+.main__play-text {
+    position: relative;
+}
+
+.main__play-circle {
+    position: absolute;
+    border-radius: 100%;
+    width: 195px;
+    height: 195px;
+    background-color: rgba(18, 18, 18, .3);
+    bottom: 0;
+    right: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__play__armor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.main__play-car {
+    width: 179px;
+    height: 118px;
+    background-image: url("../img/play_car.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: -19px;
+}
+
+.main__armor {
+    background-image: url("../img/bg_armor_card.png");
+    background-repeat: no-repeat;
+}
+
+.main__armor-mobile {
+    background-image: url("../img/mobile_armor.png");
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 130px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.main__armor span {
+    width: 300px;
+}
+
+.main__grade {
+    position: relative;
+    overflow: hidden;
+    background-image: url("../img/bg_grade.png");
+    background-repeat: no-repeat;
+}
+
+.main__grade-circle {
+    padding: 71px 95px 106px 103px;
+    position: absolute;
+    width: 331px;
+    height: 331px;
+    border-radius: 100%;
+    background-color: rgba(18, 18, 18, .3);
+    bottom: -70px;
+    left: -43px;
+}
+
+.main__grade-car {
+    background-image: url("../img/grade_car.png");
+    background-repeat: no-repeat;
+    width: 347px;
+    height: 165px;
+    position: absolute;
+    bottom: 13px;
+    right: 11px;
+}
+
+.main__grade-text {
+    position: relative;
+}
+
+.main__grade-text span {
+    width: 323px;
+}
+
+@media (max-width: 1199px) {
+    .header__content, .header__location, .main__content {
+        max-width: 852px;
+    }
+
+    .main__defects, .main__grade {
+        margin: 0;
+    }
+
+    .main__cards {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .header__button {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    h1 {
+        width: 603px;
+    }
+
+    .main__content button {
+        width: 148px;
+        padding: 14px 0;
+    }
+
+    .main__defects-car {
+        background-image: url("../img/defects_car_1199.png");
+        width: 217px;
+        height: 98px;
+        bottom: -10px;
+        right: 6px;
+    }
+
+    .main__play-car {
+        background-image: url("../img/play_car_1199.png");
+        right: 4px;
+    }
+
+    .main__armor-mobile {
+        background-image: url("../img/mobile_armor_1199.png");
+        right: 6px;
+    }
+
+    .main__grade-car {
+        background-image: url("../img/grade_car_1199.png");
+        bottom: 0;
+        right: 6px;
+    }
+
+    .main__defects, .main__play, .main__armor, .main__grade {
+        width: 420px;
+        height: 233px;
+        padding-right: 50px;
+        margin-bottom: 0;
+    }
+
+    .main__defects, .main__play {
+        margin-bottom: 12px;
+    }
+
+    .main__play-car, .main__armor-mobile, .main__grade-car {
+        width: 217px;
+        height: 93px;
+    }
+
+
+    .main__play-circle, .main__grade-circle {
+        display: none;
+    }
+
+    .header__burger-btn {
+        display: block;
+    }
+    .header__nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        right: 0;
+        bottom: 50px;
+        padding: 107px 5px 10px 5px ;
+        transition: transform .5s;
+    }
+    .header__nav-links a {
+        margin-right: 0;
+        padding: 6px 0;
+    }
+    .header__nav.open .header__nav-links {
+        opacity: 1;
+        top: -10px;
+        transform: none;
+    }
+}
+
+@media (max-width: 899px) {
+    .header__content, .header__location, .main__content {
+        max-width: 680px;
+    }
+
+    .header__nav-links {
+        bottom: 93px;
+    }
+
+    .header__nav.open .header__nav-links {
+        opacity: 1;
+        top: -54px;
+        transform: none;
+    }
+
+
+    .main__content {
+        padding-top: 120px;
+        padding-bottom: 30px;
+    }
+
+    .main__cards {
+        max-height: 100%;
+    }
+
+    .header__divider, .header__location {
+        display: none;
+    }
+
+    .main__defects, .main__play, .main__armor, .main__grade {
+        background-image: url("../img/bg_cards_899.png");
+        min-width: 100%;
+        background-size: cover;
+    }
+
+    .main__armor {
+        margin-bottom: 12px;
+    }
+
+    .main__defects-car, .main__play-car, .main__armor-mobile, .main__grade-car {
+        right: 20px;
+    }
+
+}
+
+@media (max-width: 599px) {
+    .header__content, .header__location, .main__content {
+        max-width: 335px;
+    }
+
+    .main__content {
+        padding-top: 96px;
+    }
+
+    .header__nav.open .header__nav-links {
+        opacity: 1;
+        bottom: -63px;
+        transform: none;
+    }
+
+    .header__nav-links {
+        align-items: flex-start;
+        width: 335px;
+        flex-direction: row
+    }
+
+    .header__nav-links a:last-child {
+        margin-right: 0;
+    }
+
+    .header__nav-links a {
+        padding: 2px 0 2px 0;
+        font-size: 11px;
+        margin-right: 5px;
+    }
+
+    .header__button {
+        display: none;
+    }
+
+    .main__content h1 {
+        margin-bottom: 24px;
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .main__defects, .main__play, .main__armor, .main__grade {
+        justify-content: space-between;
+        max-height: 194px;
+        background-size: contain;
+        padding: 16px 35px 16px 16px;
+        background-image: url("../img/bg_cards_599.png");
+    }
+
+    .main__defects-car, .main__play-car, .main__armor-mobile, .main__grade-car {
+        right: 8px;
+        width: 149px;
+        height: 68px;
+    }
+
+    .main__defects-car {
+        background-image: url("../img/defects_car_599.png");
+    }
+
+    .main__play-car {
+        background-image: url("../img/play_car_599.png");
+    }
+
+    .main__armor-mobile {
+        background-image: url("../img/mobile_armor_599.png");
+    }
+
+    .main__grade-car {
+        background-image: url("../img/grade_car_599.png");
+    }
+
+    .main__cards h3 {
+        font-size: 16px;
+        width: 230px;
+    }
+
+    .main__cards span {
+        margin: 0;
+    }
+
+    .main__armor span {
+        width: 284px;
+    }
+
+    .main__grade span {
+        width: 283px;
+    }
+
+}
